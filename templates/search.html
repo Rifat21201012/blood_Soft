@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #dc3545;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .product {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .product-info {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Search Results</h1>
+    <ul>
+        {% for product in results %}
+            <li class="product">
+                <div class="product-info">
+                    <div>
+                        <strong>Name:</strong> {{ product.name }}<br>
+                        <strong>Blood Group:</strong> {{ product.blood_group }}<br>
+                        <strong>Contact Number:</strong> {{ product.phone_number }}
+                    </div>
+                    <div>
+                        <!-- Add any additional information or actions here -->
+                    </div>
+                </div>
+            </li>
+        {% empty %}
+            <li>No results found.</li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
+

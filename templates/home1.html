@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 2px;
+            text-align: center;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(124, 80, 25, 0.1);
+        }
+
+        nav {
+            background-color: #262525;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin-right: 15px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #dc3545;
+            transform: scale(1.1);
+            box-shadow: 0 2px 8px rgba(188, 188, 62, 0.2);
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #dc3545;
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: #dc3545;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .highlight p:first-child {
+            margin-top: 0;
+        }
+
+        .quote-section {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .quote-section h3 {
+            font-size: 24px;
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+                margin-right: 8px;
+            }
+
+            .highlight {
+                font-size: 16px;
+            }
+
+            .quote-section h3 {
+                font-size: 20px;
+            }
+
+            .quote {
+                font-size: 18px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>About Us</h1>
+</header>
+
+<nav>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="#" style="background-color: #524f4f;">About Us</a> <!-- Style the About Us link -->
+    <a href="{% url 'home' %}">Blood Donation System</a>
+</nav>
+
+<div class="container">
+    <h2>Why Blood Donation System?</h2>
+    <div class="highlight">
+        <p>
+            Though Bangladesh has more than 160 million people, the number of safe blood banks is very few. Without divisional towns, there are hardly any blood banks. But a huge amount of blood is needed for treatment purposes. A good number of accidents take place every day where blood is needed essentially. As a result, people fall into real trouble to manage blood. But there are many blood donors who are interested in donating blood but don’t know who needs blood. The communication gap is resulting in the loss of many lives.
+        </p>
+        <p>
+            We come into the scenario to reduce or minimize the communication gap and connect people in a moment using the amazing power of SMS and email. As our services can also be availed by SMS, people from any class of society can easily avail of our services.
+        </p>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section">
+        <h3>Quote of the Day</h3>
+        <p class="quote">"The best way to find yourself is to lose yourself in the service of others." - Mahatma Gandhi</p>
+    </div>
+
+    <!-- Short Paragraph Section -->
+    <div class="highlight">
+        <p>
+            Blood donation is an essential part of healthcare and can make a difference in the lives of many individuals. It’s a simple yet powerful act that saves lives. Our mission is to bring people together to help those in need, making the process easier and more accessible for everyone.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Filtered Donors</title>
+    <!-- Bootstrap CSS (for example) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container mt-4">
+        <a href="{% url 'another_second' %}" class="btn btn-success mb-3">Back to All Donors</a>
+        {% if donors %}
+            {% for donor in donors %}
+                <div class="card mb-3 p-3">
+                    <h4 class="text-danger">Blood Group: {{ donor.blood_group }}</h4>
+                    <p><strong>Quantity:</strong> {{ donor.quantity }}</p>
+                    <p><strong>When Needed:</strong> {{ donor.when_needed|date:"F j, Y, g a" }}</p>
+                    <p><a href="tel:{{ donor.contact_number }}" class="text-primary">Contact Number: {{ donor.contact_number }}</a></p>
+                    <p><strong>Location:</strong> {{ donor.description }}</p>
+                    <p><strong>Condition Requiring Blood:</strong> {{ donor.disease_description }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No donors found matching your filter.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

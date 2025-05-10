@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Donation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #dc3545;
+        }
+        form {
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input,
+        select,
+        textarea {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            width: 100%;
+            background-color: #dc3545;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Need Blood?Submit a request</h2>
+    <form method="POST">
+    {% csrf_token %}
+
+    <label for="{{ form.blood_group.id_for_label }}">Blood Group:</label>
+    {{ form.blood_group }}
+
+    <label for="{{ form.quantity.id_for_label }}">Quantity:-</label>
+    {{ form.quantity }}
+
+    <label for="{{ form.when_needed.id_for_label }}">When Needed:</label>
+    {{ form.when_needed }}
+
+    <label for="{{ form.contact_number.id_for_label }}">Contact Number:</label>
+    {{ form.contact_number }}
+
+    <label for="{{ form.description.id_for_label }}">Required Area:</label>
+    {{ form.description }}
+
+    <label for="{{ form.disease_description.id_for_label }}">Condition Requiring Blood:</label>
+    {{ form.disease_description }}
+
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+</body>
+</html>

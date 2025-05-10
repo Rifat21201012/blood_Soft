@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Availability</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e53935;
+            --background: #f7f7f7;
+            --text-dark: #222;
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --glass-blur: blur(12px);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to right, #fbe9e7, #ffebee);
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #ffffffc0;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            backdrop-filter: var(--glass-blur);
+            position: relative;
+        }
+
+        .btn-home {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background-color: var(--primary);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn-home:hover {
+            background-color: #c62828;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 40px;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .search-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+
+        .search-form input {
+            width: 100%;
+            max-width: 500px;
+            padding: 14px 20px;
+            border-radius: 30px;
+            border: 2px solid var(--primary);
+            font-size: 16px;
+            background: #fff;
+            transition: 0.3s;
+        }
+
+        .search-form input:focus {
+            border-color: #b71c1c;
+            outline: none;
+        }
+
+        .search-form button {
+            padding: 14px 30px;
+            font-size: 16px;
+            border: none;
+            background: var(--primary);
+            color: white;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .search-form button:hover {
+            background: #b71c1c;
+        }
+
+        .results-header {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #d32f2f;
+        }
+
+        .donor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .donor-info {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            backdrop-filter: var(--glass-blur);
+            transition: transform 0.3s ease;
+        }
+
+        .donor-info:hover {
+            transform: translateY(-8px);
+        }
+
+        .donor-info h2 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .donor-info p {
+            font-size: 15px;
+            margin: 6px 0;
+        }
+
+        .no-results {
+            text-align: center;
+            color: #777;
+            font-size: 18px;
+        }
+
+        .loader {
+            display: none;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .loader img {
+            width: 60px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="{% url 'home' %}" class="btn-home">Home</a>
+    <h1>Find Blood Donors</h1>
+
+<div class="search-form">
+  <form method="get" action="{% url 'product_search' %}" class="search-bar">
+    <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;">
+      <input type="text" name="search_query" id="search_query"
+             placeholder="Blood Group (e.g. A+, O-)" value="{{ request.GET.search_query }}">
+      <input type="text" name="location_query" id="location_query"
+             placeholder="Location (e.g. Dhanmondi)" value="{{ request.GET.location_query }}">
+    </div>
+    <div style="margin-top: 15px; text-align: center;">
+      <button type="submit">Search</button>
+    </div>
+  </form>
+</div>
+
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <img src="https://i.gifer.com/ZZ5H.gif" alt="Loading...">
+        <p>Loading available donors...</p>
+    </div>
+
+    {% if request.GET.search_query or request.GET.location_query %}
+        {% if results %}
+            <h2 class="results-header">Search Results</h2>
+            <div class="donor-grid">
+                {% for product in results %}
+                    <div class="donor-info">
+                        <h2>{{ product.name }}</h2>
+                        <p><strong>Blood Group:</strong> {{ product.blood_group }}</p>
+                        <p><strong>Contact:</strong> {{ product.phone_number }}</p>
+                        <p><strong>Location:</strong> {{ product.present_address }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="no-results">No donors found for the given criteria.</p>
+        {% endif %}
+    {% else %}
+        <h2 class="results-header">Available Donors</h2>
+        {% if products %}
+            <div class="donor-grid">
+                {% for product in products %}
+                    <div class="donor-info">
+                        <h2>{{ product.name }}</h2>
+                        <p><strong>Blood Group:</strong> {{ product.blood_group }}</p>
+                        <p><strong>Contact:</strong> {{ product.phone_number }}</p>
+                        <p><strong>Location:</strong> {{ product.present_address }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="no-results">No donors available right now.</p>
+        {% endif %}
+    {% endif %}
+</div>
+
+<script>
+    const searchForm = document.querySelector('form');
+    const loader = document.getElementById('loader');
+
+    searchForm.addEventListener('submit', () => {
+        loader.style.display = 'block';
+    });
+</script>
+
+</body>
+</html>

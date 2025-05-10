@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donor Availability</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #dc3545;
+        }
+        .donor-info {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .donor-info h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .donor-info p {
+            margin: 10px 0;
+        }
+        .search-form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-form input[type="text"] {
+            padding: 10px;
+            width: 60%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+        .search-form button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #dc3545;
+            color: #fff;
+            cursor: pointer;
+        }
+        .search-form button:hover {
+            background-color: #c82333;
+        }
+        .no-results {
+            text-align: center;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Donor Availability</h1>
+    <div class="search-form">
+        <form action="{% url 'product_search' %}" method="GET">
+            <input type="text" name="search_query" placeholder="Search by blood group...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    {% if products %}
+        {% for product in products %}
+            <div class="donor-info">
+                <h2>{{ product.name }}</h2>
+                <p><strong>Blood Group:</strong> {{ product.blood_group }}</p>
+                <p><strong>Contact Number:</strong> {{ product.phone_number }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="no-results">No donors available.</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
