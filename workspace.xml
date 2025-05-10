@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b56ef776-d890-49ae-b1a9-58fab87ba5c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sss.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sss.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/donors/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/donors/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/donors/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/donors/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/donors/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/donors/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/donors/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/donors/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/myapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/myapp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/products/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/products/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/products/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/forms.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/forms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/formsnew.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/formsnew.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/home1.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/home1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/home2.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/home2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/home3.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/home3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/templates/search_results.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/templates/search_results.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;shifat21201013&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Rifat21201012/donor.git&quot;,
+    &quot;accountId&quot;: &quot;e5914e3d-7265-4f3d-bb90-6fb6262f3235&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2pQFwfNC2mKlzsOGeOBY4LpOJNa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
+        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b56ef776-d890-49ae-b1a9-58fab87ba5c2" name="Changes" comment="" />
+      <created>1732690632023</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732690632023</updated>
+      <workItem from="1732690633286" duration="52000" />
+      <workItem from="1732690696549" duration="5270000" />
+      <workItem from="1732699979971" duration="120000" />
+      <workItem from="1732709084185" duration="4000" />
+      <workItem from="1732709317049" duration="121000" />
+      <workItem from="1732766076686" duration="431000" />
+      <workItem from="1732766532960" duration="1195000" />
+      <workItem from="1732775745848" duration="73000" />
+      <workItem from="1733330822176" duration="2794000" />
+      <workItem from="1734158119368" duration="718000" />
+      <workItem from="1739864907445" duration="1657000" />
+      <workItem from="1740121158731" duration="1109000" />
+      <workItem from="1741067937397" duration="1073000" />
+      <workItem from="1745778580022" duration="9071000" />
+      <workItem from="1745919329850" duration="355000" />
+      <workItem from="1746432086403" duration="8661000" />
+      <workItem from="1746510158049" duration="447000" />
+      <workItem from="1746521058237" duration="814000" />
+      <workItem from="1746885031461" duration="1890000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
